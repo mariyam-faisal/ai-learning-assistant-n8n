@@ -16,7 +16,7 @@ This project also allowed me to gain hands-on experience with workflow automatio
 
 ---
 
-##Features 
+## Features 
 
 - Explains computer science and programming concepts 
 - Summarize technical articles and notes
@@ -44,10 +44,11 @@ The workflow includes:
 ## Technology / Tools used 
 
 - n8n
-- OpenAI-compatible language model
-- JSON workflow configuration
-- GitHub
+- OpenRouter API for AI model access
+- Large Language Models (LLMs)
 - Prompt Engineering
+- JSON workflow configuration
+- GitHub 
 
 ---
 
@@ -55,9 +56,25 @@ The workflow includes:
 
 1. User submits a question.
 2. The workflow receives the request.
-3. The AI agent interprets the prompt.
+3. The AI agent interprets the system prompt.
 4. The language model generates a response.
 5. The response is returned to the user.
+
+---
+
+## AI Agent Design and System Prompt
+
+The AI assistant's behaviour is controlled trough a custom system prompt.
+
+Instead of training a new AI model, the assistant is configured using prompt engineering techniques. The system prompt provides the AI agent with:
+
+- Its role and purpose
+- How it should communicate
+- The type of responses it should provide
+- How it should support students
+- Guidlines for explaining technical concepts, learning, brainstorming and writing tasks
+
+The system prompt allows the AI agent to behave consistently and responds like a learning assistant rather than a general chatbot.
 
 ---
 
@@ -66,6 +83,7 @@ The workflow includes:
 ```text
 ai-learning-assistant-n8n/
 ├── README.md
+├── LICENSE
 ├── workflow.json
 └── images/
     ├── workflow-overview.png
